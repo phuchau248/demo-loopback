@@ -4,21 +4,23 @@ import {Entity, model, property} from '@loopback/repository';
 export class User extends Entity {
   @property({
     type: 'number',
+    required: true,
     id: true,
-    generated: true,
   })
-  id?: number;
+  id: number;
 
   @property({
     type: 'string',
-  })
-  name?: string;
-
-  @property({
-    type: 'boolean',
     required: true,
   })
-  hasAccount: boolean;
+  username: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  password: string;
+
 
   constructor(data?: Partial<User>) {
     super(data);
