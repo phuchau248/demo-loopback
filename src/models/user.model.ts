@@ -4,10 +4,10 @@ import {Entity, model, property} from '@loopback/repository';
 export class User extends Entity {
   @property({
     type: 'number',
-    required: true,
     id: true,
+    generated: true,
   })
-  id: number;
+  uid?: number;
 
   @property({
     type: 'string',
