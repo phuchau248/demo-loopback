@@ -5,7 +5,6 @@ export class User extends Entity {
   @property({
     type: 'number',
     id: true,
-    generated: true,
   })
   uid?: number;
 
